@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+    
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#menu__bar {
+    overflow: hidden;
+    background-color: #333;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .main{
+    width: 100%;
+    height: 720px;
+  }
+  
+  #menu__bar a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  #menu__bar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  #menu__bar a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+  @media (max-width: 581px) and (min-width: 422px){
+    .main{
+      height: 900px;
+    }
+
+  }
+  @media (max-width: 791px) and (min-width: 581px){
+    .main{
+      height: 1000px;
+    }
+
+  }
+
+ 
+  @media (max-width: 768px){
+        #text1{
+          color:darkorange;
+          text-align: center;
+          /* margin-top: 0px;
+          padding-top: 0px; */
+          /* margin-bottom: 0px;
+           padding-bottom: 1px; */
+        }
+        #text2{
+          /* color:darkorange; */
+          text-align: center;
+           /* padding-bottom: 0px; */
+        }
+        /* .col-md-6{
+          margin-top: 5px;
+          padding-top: 0px;
+          margin-bottom: 0px;
+          padding-bottom: 0px;
+        }
+        .main_header-right{
+          margin-top: 5px;
+          padding-top: 0px;
+          margin-bottom: 0px;
+          padding-bottom: 0px;
+        } */
+        .button{
+          margin:0 auto;
+          display:block;      
+
+        }
+        .main{
+          height: 900x;
+        }
+
+    }
+    
+
+
+  .button {
+    padding: 10px 25px;
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 3px #999;
+  }
+  
+  .button:hover {
+    background-color: #3e8e41
+  }
+  
+  .button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+  span{
+      color:  #3399ff;
+  }
+
+  .footer{
+    width: 100%;
+    height: 35px;
+    background-color:black;
+    color:white;
+    text-align: center;
+  }
+
+  #text1{
+    font-family: 'Lato', sans-serif;
+    font-size: 25px;
+  }
+
+  .row{
+    width: 100%;
+  }
+  </style>
+  <!-- <link rel="stylesheet" href="./home.css"> -->
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Home</title>
+   
+</head>
+
+<body>
+  <div class="final">
+    <div id="menu__bar">
+        <a href="#" class="active">Weather</a>
+        <a href="/">Home</a>
+        <a href="/weather">Weather</a>
+        <a href="/about">About</a>
+    </div>
+    <div class="main">
+
+   
+    <div class="containter-fluid main_header">
+        <div class="row">
+            <div class="col-md-10 col-12 mx-auto">
+                <div class="row">
+                    <div class="col-md-6 col-12 main_header-left">
+                      <br>
+                      <br>
+                      <br><br><br><br>
+                      <br>
+                        <p id="text1">Welcome to Weather App</p>
+                        <br>
+                        <h1 id="text2">Get the Latest <span>Weather</span> Info of your city</h1>
+                        <!-- <br> -->
+                        <a href="/weather"><button class="button">Check Now</button></a>
+                    </div>
+                    <div class="col-md-6 col-12 main_header-right">
+                        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                <img class="w-100" src="https://1.bp.blogspot.com/-y-mIZHi_S6E/YGMz2cOkvuI/AAAAAAAABME/wWSoMCPWnRkhPohLWQfhf-x0YL1Vxg2ZQCLcBGAsYHQ/s2000/img2.jpg" alt="First slide">
+                              </div>
+                              <div class="carousel-item">
+                                <img class="w-100" src="https://1.bp.blogspot.com/-m_3WnUGTzJU/YGMz10LN_FI/AAAAAAAABMA/vGKwnLtzVhQkmICjA5uq91Qlh6y4m5n_ACLcBGAsYHQ/s2000/img3.jpg" alt="Second slide">
+                              </div>
+                              <div class="carousel-item">
+                                <img class="w-100" src="https://1.bp.blogspot.com/-n1ze9S46I0k/YGMz9A4Xy_I/AAAAAAAABMI/9Rp11geygQ8J7zh7fAvcBJWh_XOtEv3yQCLcBGAsYHQ/s2048/img4.jpg" alt="Third slide">
+                              </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="sr-only">Next</span>
+                            </a>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+  </div>
+    <div class="footer">
+      <p>Created with ❤ by Nevil Saspara</p>
+    </div>
+  </div>
+
+</body>
+
+</html>

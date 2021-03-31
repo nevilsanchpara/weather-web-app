@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <style>
+        *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#menu__bar {
+    overflow: hidden;
+    background-color: #333;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  #img6{
+      padding-left: 50px;
+      
+  }
+  #menu__bar a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  #menu__bar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  #menu__bar a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  .main__h{
+      display: flex;
+      justify-content: space-around;
+  }
+  img{
+      width: 350px;
+      margin-top: 80px;
+      
+  }
+  #img5{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  .txt{
+    margin-top: 250px;
+    padding-right: 100px;
+    font-family: 'Roboto', sans-serif;
+  }
+  @media (max-width: 974px) and (min-width: 422px){
+   /* img{
+       width:280px;
+   } */
+   .main__h{
+       display: block;
+       width: 90%;
+       margin: auto;
+       text-align: center;
+   }
+   .txt{
+       text-align: center;
+       padding-right: 40px;
+       margin-top: 50px;
+
+   }
+   .imgz{
+       margin-bottom: 90px
+   }
+  }
+
+  span{
+      color: #3399FF;
+  }
+    </style>
+    <div class="final">
+        <div id="menu__bar">
+            <a href="#" class="active">Weather</a>
+            <a href="/">Home</a>
+            <a href="/weather">Weather</a>
+            <a href="/about">About</a>
+        </div>
+    <div class="main__h">
+        <div class="imgz">
+            <img src="https://1.bp.blogspot.com/-TRdhrJSXi0I/YGM0fRShdnI/AAAAAAAABMY/hjYg4gVPtbE0K62goJHOIgzxiKR7rKteACLcBGAsYHQ/s688/img5.png" alt="Nevil Sanchpara" id="img5">
+        </div>
+        <div class="txt">
+            <h1 class="txt1">Hello! I'm <span>Nevil Sanchpara</span>.I'm <br> <span>MERN </span>Stack Developer.</h1>
+            <img src="https://1.bp.blogspot.com/-Usmv-M4MVpY/YGM0fnmdrNI/AAAAAAAABMc/xKiof0AZ6nsMUDqMxBD_gJEcz0AbqUnHgCLcBGAsYHQ/s320/img6.jpg" alt="MERN Stack" id="img6">
+        </div>
+    </div>
+</body>
+</html>

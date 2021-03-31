@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        #menu__bar a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        #menu__bar {
+            /* margin-top: -8px;
+            padding-top: 0px;
+            padding-bottom: 0px;
+            margin-bottom: 0px; */
+            overflow: hidden;
+            background-color: #333;
+            font-family: 'Roboto', sans-serif;
+            width: 100%;
+        }
+
+        #menu__bar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        #menu__bar a.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        form input {
+            background-color: black;
+            text-align: center;
+            border-radius: 50px;
+            padding: 15px 250px;
+            margin-top: 20px;
+            color: white;
+        }
+
+        form :placeholder-shown {
+            color: white;
+        }
+
+        form {
+            text-align: center;
+        }
+
+        /* .footer{
+            background-color: #333333;
+            color: white;
+            padding-bottom: 20px;
+            text-align: center;
+            padding-top: 20px;
+            position: fixed;
+            margin-bottom: 20px;
+            padding-bottom: 80px;
+            
+        }  */
+        /* #temp_form{
+            background-color: red;
+            padding-bottom: 20px;
+            height: 500px;
+        } */
+
+
+        #btn1 {
+            margin-left: -80px;
+            border-radius: 100px;
+            background-color: #3399FF;
+            padding: 15px 16px;
+            cursor: pointer;
+        }
+
+        .date {
+            width: 33%;
+            height: 40px;
+            background-color: #202020;
+            margin: auto;
+            margin-top: 60px;
+            color: white;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            padding-top: 10px;
+            display: flex;
+            justify-content: space-around;
+            border-bottom: 2px solid grey;
+        }
+
+        .output {
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            width: 33%;
+            height: 220px;
+            background-color: #202020;
+            margin: auto;
+            margin-bottom: 330px;
+            padding-top: 10px;
+            color: white;
+        }
+
+        #xyz {
+            font: 300;
+            font-size: 25px;
+            padding-bottom: 28px;
+            padding-top: 28px;
+        }
+
+        #demo1 {
+            font: 300;
+            font-size: 25px;
+        }
+
+        /* #demo {
+            color: white;
+            padding-top: 20px;
+        } */
+
+        @media (max-width: 1176px) and (min-width: 670px) {
+            .output {
+                width: 50%;
+            }
+            .date{
+                width: 50%;
+            }
+        }
+        @media (max-width: 714px) and (min-width: 507px) {
+            .output {
+                width: 65%;
+            }
+            .date{
+                width: 65%;
+            }
+            form input {
+            background-color:black;
+            text-align: center;
+            border-radius: 50px;
+            padding: 15px 120px;
+            margin-top: 20px;
+            color: white;
+        }
+            
+        }
+
+        @media (max-width: 507px) and (min-width: 300px){
+            .output {
+                width: 65%;
+            }
+            .date{
+                width: 65%;
+            }
+            form input {
+            background-color:black;
+            text-align: center;
+            border-radius: 50px;
+            padding: 15px 60px;
+            margin-top: 20px;
+            color: white;
+        }
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather page</title>
+    <!-- <link rel="stylesheet" href="./home.css"> -->
+    <link rel="stylesheet" href="./weather.css">
+</head>
+
+<body>
+    <div class="full">
+        <div id="menu__bar">
+            <a href="#" class="active">Weather</a>
+            <a href="/">Home</a>
+            <a href="/weather">Weather</a>
+            <a href="/about">About</a>
+        </div>
+        <form id="temp_form">
+            <div class="wrapper">
+
+                <input type="text" placeholder="Enter City Name" id="cityname">
+                <button id="btn1" type="submit" onclick="myFunc()">Submit</button>
+            </div>
+            <div class="date">
+                <p id="c_date"></p>
+                <p id="c_day"></p>
+            </div>
+            <div class="output">
+                <p id="xyz">Your Output will be here</p>
+                <p id="demo1"></p>
+                <!-- <p id="icons">Yeah</p> -->
+            </div>
+
+            <!-- <div class="footer">
+            <p>Created with ❤ by Nevil Saspara</p>
+        </div> -->
+    </div>
+</body>
+<script>
+
+    var today = new Date();
+
+    var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+    document.getElementById("c_date").innerHTML = date;
+    var d = new Date();
+    var weekday = new Array(7);
+    weekday[0] = "Sunday";
+    weekday[1] = "Monday";
+    weekday[2] = "Tuesday";
+    weekday[3] = "Wednesday";
+    weekday[4] = "Thursday";
+    weekday[5] = "Friday";
+    weekday[6] = "Saturday";
+
+    var n = weekday[d.getDay()];
+    document.getElementById("c_day").innerHTML = n;
+    function myFunc() {
+        //stop to reloading page
+        event.preventDefault();
+
+
+        // storing input data in variable 
+        var a = document.getElementById("cityname").value;
+
+        // checking on console/Alert
+        // console.log(a);
+        // alert(a);
+
+
+        // API Url
+        let url = `https://api.openweathermap.org/data/2.5/weather?q=${a}&appid=b4fb58dc4f3ab576a9822d894dc586f2&units=metric`;
+
+        //checking URL in console.log/Alert
+        // console.log(url);
+        // alert(url);
+
+        //fetch function
+        fetch(url).then((apidata) => {
+            // console.log(apidata);
+            return apidata.json();
+        }).then((actualdata) => {
+            //checking data on console.log
+            // console.log(actualdata);
+            // console.log(actualdata.name);
+            // console.log(actualdata.weather[0].main);
+
+            let yup = `${actualdata.main.temp}° C`;
+            var hm = actualdata.name + "," + actualdata.sys.country;
+            // document.getElementById("xyz").innerHTML = actualdata.name;
+            document.getElementById("xyz").innerHTML = hm;
+            // document.getElementById("demo1").innerHTML =actualdata.main.temp;
+            document.getElementById("demo1").innerHTML = yup;
+
+            // document.getElementById("icons").innerHTML = weather[0].icon;
+
+
+
+        })
+    }
+
+</script>
+
+</html>
